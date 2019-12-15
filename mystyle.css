@@ -1,0 +1,1059 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+video,
+frame {
+    max-width: 100%;
+    height: auto;
+}
+
+/*color variables*/
+:root {
+    --blue: #050B4F;
+    --red: #C41414;
+    --brown: #A68C2D;
+    --cream: #EBCE78;
+}
+
+.body-container {
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+    margin: auto;
+}
+
+
+.header-container {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+/*menu icon settings*/
+.burger-icon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.bar {
+    display: block;
+    height: 2px;
+    width: 35px;
+    background-color: black;
+    transition: 2s;
+    margin: 7px 0;
+    z-index: 10;
+}
+
+
+.action-btn {
+    z-index: 11;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+}
+
+/*menu icon animation*/
+.action-btn:checked ~ .burger-icon > #bar1 {
+    transform: translateY(9px) rotate(45deg);
+    transition: 2s;
+    position: relative;
+
+}
+
+.action-btn:checked ~ .burger-icon > #bar2 {
+    opacity: 0;
+    transition: 1s;
+    position: relative;
+}
+
+.action-btn:checked ~ .burger-icon > #bar3 {
+    transform: translateY(-9px) rotate(-45deg);
+    transition: 2s;
+    position: relative;
+}
+
+
+/*menu settings*/
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    padding-top: 60px;
+    background: var(--cream);
+    z-index: 2;
+}
+
+.action-btn:checked ~ .navigation-container {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.menu-logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.nav-element {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--red);
+    margin: 30px auto;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px var(--blue);
+}
+
+
+
+/*intro section*/
+.title-content {
+    width: 100%;
+    min-height: 500px;
+    background-image: url(images/mg_6065.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+
+}
+
+.title {
+    color: var(--red);
+    padding: 20px;
+}
+
+.subtitle {
+    display: flex;
+}
+
+.font-setting {
+    font-size: 8vw;
+    color: var(--red);
+}
+
+.font-setting-sub {
+    font-size: 4vw;
+    line-height: 2;
+}
+
+.home-opacity-bg {
+    padding: 20px;
+    background-color: rgb(255, 255, 255, .5);
+    border: 2px solid white;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+/*link to other pages*/
+.connections  {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    margin: 2em auto;
+}
+
+.connections > div {
+    width: 100%;
+    margin: auto;
+}
+
+.products-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.products-content > a {
+    margin: auto;
+    display: block;
+    font-size: 1.5em;
+    color: black;
+    text-decoration: underline;
+}
+
+.products-title {
+    color: var(--red);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.yellowbar {
+    position: relative;
+    top: 55px;
+    max-width: 80%;
+    left: -80px;
+    transform: rotate(-5deg);
+}
+
+.blackbar {
+    position: absolute;
+    top: 150px;
+    max-width: 70%;
+    right: -50px;
+    transform: rotate(20deg);
+    overflow: hidden;
+}
+
+.products-subtitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 170px 0 30px 0;
+}
+
+.minisbars {
+    width: 450px;
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 1000px;
+    min-height: 400px;
+    background-image: url(images/rJXnhc3FVx_0x750.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 0;
+    width: 100%;
+}
+
+
+.about-title {
+    color: var(--red);
+    padding: 30px;
+
+}
+
+.about-subtitle {
+    display: flex;
+    color: black;
+}
+
+.recipes-content {
+    max-width: 1000px;
+    min-height: 400px;
+    background-image: url(images/cakeonchair4.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.recipes-title {
+    color: var(--red);
+    padding: 20px;
+
+}
+
+.recipes-subtitle {
+    display: flex;
+}
+
+.history-content {
+    max-width: 1000px;
+    min-height: 400px;
+    background-image: url(images/600px-Tobler-81.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.history-title {
+    color: var(--red);
+    padding: 20px;
+
+}
+
+.history-subtitle {
+    display: flex;
+
+
+}
+
+/*products*/
+.products-intro {
+    width: 100%;
+    height: 250px;
+    background-image: url(images/tobleroneimage.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.product-background {
+    background-color: rgba(235, 206, 120, .6);
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.product-img {
+    max-width: 100%;
+    margin: 50px auto 20px auto;
+    display: flex;
+}
+
+.product-title {
+    color: var(--red);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.border {
+    border: 2px solid var(--red);
+    padding: 20px;
+    width: auto !important;
+    margin: 30px auto 30px auto;
+    max-width: max-content;
+}
+
+.product-subtitle {
+    margin: 10px auto 10px auto;
+    width: 70%;
+    text-align: center;
+}
+
+/*about*/
+.about-intro {
+    width: 100%;
+    height: 250px;
+    background-image: url(images/aboutabout.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-titles {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.about-p1 {
+    margin: 20px auto 20px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.about-img {
+    max-width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.about-img-top {
+    margin: auto;
+}
+
+/*recipes*/
+.recipes-intro {
+    width: 100%;
+    height: 250px;
+    background-image: url(images/baking.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.recipes-page-title {
+    margin: 30px auto 30px auto;
+    text-align: center;
+    line-height: 150%;
+    border: 2px solid var(--red);
+    padding: 20px;
+}
+
+
+
+.recipe-image-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+    margin: 10px 0 100px 0;
+
+}
+
+.recipe-window:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
+}
+
+.recipe-img {
+    display: flex;
+    max-width: 100%;
+}
+
+.full-receipt {
+    width: 60%;
+    margin: auto;
+}
+
+.recipe-title-img {
+    background-color: rgb(255, 255, 255, .5);
+    padding: 20px;
+    border: 2px solid white;
+    top: 40%;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.recipe-window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    background-color: white;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+.recipe-window-title {
+    color: var(--red);
+    padding: 5px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 20px;
+    text-align: center;
+}
+
+ol {
+    padding: 20px;
+    text-align: left;
+}
+
+.recipe-window .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*history*/
+
+.history-intro {
+    width: 100%;
+    height: 250px;
+    background-image: url(images/500px-Tobler-81.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.history-page-title {
+    margin: 30px auto 30px auto;
+    text-align: center;
+    line-height: 150%;
+    border: 2px solid var(--red);
+    padding: 20px;
+}
+
+.year {
+    font-size: 5em;
+    margin: 20px;
+}
+
+.history-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+
+}
+
+.history-text-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-page-title {
+    width: auto;
+}
+
+.history-text {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+
+}
+
+.history-img {
+    margin: 30px 0 30px 0;
+}
+
+
+/*footer*/
+
+.footer-container {
+    width: 100%;
+    height: 300px;
+    background: black;
+
+}
+
+.follow-us {
+    color: var(--brown);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.some-icon {
+    width: 30px;
+
+}
+
+.icon-background {
+    width: 40px;
+    height: 40px;
+    background-color: var(--brown);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: center;
+}
+
+.email {
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+}
+
+.submit {
+    background-color: var(--brown);
+    padding: 5px;
+}
+
+
+/*images settings on differnet screens*/
+@media only screen and (min-width: 383px) {
+
+
+    .title-content {
+        background-size: 130%;
+
+    }
+
+/*
+    .history-content {
+        background-size: 130%;
+
+    }
+*/
+
+    .blackbar {
+        right: -50px;
+    }
+}
+
+@media only screen and (min-width: 411px) {
+
+
+    .title-content {
+        background-size: cover;
+
+    }
+
+    .about-content {
+        background-size: cover;
+    }
+
+    .recipes-content {
+        background-size: cover;
+
+    }
+
+    .history-content {
+       background-size: cover;
+
+    }
+}
+
+@media only screen and (min-width: 450px) {
+
+
+    .title-content {
+       background-size: cover;
+
+    }
+
+    .about-content {
+        background-size: cover;
+
+    }
+
+    .recipes-content {
+        height: 400px;
+    }
+
+    .history-content {
+       background-size: cover;
+    }
+
+    .products-intro {
+       background-size: cover;
+    }
+
+    .about-intro {
+       background-size: cover;
+    }
+
+    .recipes-intro {
+       background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+
+
+    .title-content {
+       background-size: cover;
+
+    }
+
+    .about-content {
+       background-size: cover;
+
+    }
+
+    .recipes-content {
+       background-size: cover;
+    }
+
+    .history-content {
+       background-size: cover;
+
+    }
+
+    .yellowbar {
+        top: 100px;
+    }
+
+    .blackbar {
+        top: 250px;
+        right: -50px;
+    }
+
+    .products-subtitle {
+        margin-top: 200px;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    .font-setting {
+        font-size: 7vw;
+    }
+
+    .font-setting-sub {
+        font-size: 3vw;
+    }
+
+    .products-subtitle {
+        margin-top: 250px;
+    }
+
+    .products-intro {
+        height: 400px;
+    }
+
+    .about-intro {
+        height: 350px;
+    }
+
+    .recipes-intro {
+        height: 350px;
+    }
+
+    .history-intro {
+        height: 350px;
+    }
+
+}
+
+@media only screen and (min-width: 670px) {
+    .recipes-content {
+        background-image: url(images/cakeonchair2.jpg);
+
+    }
+
+    .about-intro {
+        height: 420px;
+    }
+
+    .recipes-intro {
+        height: 420px;
+    }
+
+    .history-intro {
+        height: 420px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    .minisbars {
+        width: 500px;
+
+    }
+
+    .products-intro {
+        height: 500px;
+    }
+
+    .recipes-intro {
+        height: 500px;
+    }
+
+    .history-text {
+        max-width: 70%;
+    }
+
+    .history-intro {
+        height: 500px;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .title-content {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(images/MINIS2.jpg);
+        min-height: 1000px;
+    }
+    
+    .connections > div {
+        min-height: 600px;
+    }
+
+    .font-setting {
+        font-size: 6vw;
+    }
+
+    .font-setting-sub {
+        font-size: 2vw;
+    }
+
+    .yellowbar {
+        max-width: 60%;
+    }
+
+    .blackbar {
+        right: -20px;
+        max-width: 60%;
+    }
+
+    .products-intro {
+        height: 420px;
+
+    }
+
+    .product-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-content > img {
+        max-width: 60%;
+    }
+    
+    .connections {
+        max-width: 60%;
+    }
+
+    .about-intro {
+        height: 500px;
+    }
+}
+
+/*computer screen menu settings*/
+
+@media only screen and (min-width: 1035px) {
+
+    .header-container {
+        position: relative;
+    }
+
+
+    .navigation-container {
+        background-color: var(--cream);
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 20px 0 0;
+        height: 100px;
+        opacity: 1;
+        flex-direction: row;
+        top: 0;
+    }
+    
+    .navigation-container > a {
+        padding-top: 1em;
+    }
+
+    .bar {
+        display: none;
+    }
+
+    .action-btn {
+        display: none;
+    }
+
+    .nav-element {
+        text-decoration: none;
+        margin: 10px;
+        color: var(--red);
+        width: auto;
+        font-size: 1.6em;
+
+    }
+
+    .nav-element:hover {
+        cursor: pointer;
+    }
+
+    .menu-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 20px;
+    }
+
+    .font-setting {
+        font-size: 4.5vw;
+    }
+
+    .font-setting-sub {
+        font-size: 1.7vw;
+
+    }
+
+    .title-content {
+        padding-top: 100px;
+    }
+
+    .follow-us {
+        font-size: 25px;
+    }
+
+    .about-content {
+        margin: 50px 0;
+    }
+
+    .recipes-content {
+        margin: 50px 0;
+    }
+
+    .history-content {
+        margin: 50px 0;
+    }
+
+    .products-intro {
+        height: 480px;
+    }
+
+    .about-intro {
+        height: 600px;
+    }
+
+    .about-section {
+        display: flex;
+        justify-content: center;
+        margin: 100px auto 100px auto;
+
+    }
+
+    .direction {
+        direction: rtl;
+    }
+
+    .about-img {
+        max-width: 40%;
+        margin: auto 100px auto 100px;
+
+    }
+
+    .about-img-top {
+        max-width: 40%;
+        margin: auto;
+        display: flex;
+
+
+    }
+
+    .about-title-subtitle {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: auto;
+
+
+    }
+
+    .recipes-intro {
+        height: 600px;
+    }
+
+    .history-intro {
+        margin-top: 100px;
+    }
+}
+
+
+@media only screen and (min-width: 1140px) {
+
+    .minisbars {
+        min-width: 600px;
+    }
+
+    .products-intro {
+        height: 550px;
+        margin-top: 0;
+    }
+
+    .history-intro {
+        margin-top: 50px;
+        height: 600px;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+
+
+    .font-setting {
+        font-size: 4vw;
+    }
+
+    .font-setting-sub {
+        font-size: 1.5vw;
+    }
+    
+    .yellowbar {
+        max-width: 40%;
+    }
+    
+    .blackbar {
+        max-width: 40%;
+    }
+
+    .minisbars {
+        width: 700px;
+    }
+
+    .products-intro {
+        height: 900px;
+        margin-top: 0;
+    }
+    
+    .products-subtitle {
+        margin: 5em auto 0;
+    }
+
+    .history-intro {
+        height: 650px;
+    }
+}
